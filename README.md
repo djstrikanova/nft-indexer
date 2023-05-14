@@ -18,7 +18,9 @@ https://www.anaconda.com/
 
 Set Windows Environment Path Variables
 How the path looked for me:
+
 C:\Users\djstrikanova\anaconda3\Scripts
+
 C:\Users\djstrikanova\anaconda3\Library\bin
 
 ## Install PostGreSQL
