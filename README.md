@@ -69,6 +69,8 @@ nft_huggingface_analyze.py is executed to generate annotations for each unqiue I
 
 ## Storage
 
+Step 4: Storage annotations in Elasticsearch.
+
 Locally, pgsql is used to store data. The models of these tables are provided in the "models" directory. Publicly, a Searchly Elasticsearch instance is fed information through the nft_elasticsearch.py script. This script exports all the annotations and IPFS hashes to Elasticsearch, allowing the Searchkit Demo to retrieve them. 
 
 ## TODO
