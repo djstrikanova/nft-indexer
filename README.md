@@ -73,3 +73,16 @@ Locally, pgsql is used to store data. The models of these tables are provided in
 
 - Automate scanning, downloading and analysis. In the current iteration, scanning/downloading/analysis is done manually by executing the script through command line. These scripts need to be upgraded such that a cronjob on a linux server can keep these scripts maintaining the most up to date NFT image annotations as they are generated. 
 
+- Collect Collection Images
+    - Collections have their own specific image that represents the entire collection, the IPFS hashes for collections should also be collected and analyzed. 
+
+- Rewrite Demo to use InstantSearch. The current demo uses Searchkit and an out of data version of it, I'd like to rebuild it using InstantSearch. The Demo also needs more features including:
+    - After clicking an image, more data should be displayed. Such as how many assets have this IPFS hash, what collection they correspond to, and a link to browse these assets on AtomicHub.
+    - All collection names should be searchable, users should be able to select their favorites. 
+    - A user should be able to look up a specified IPFS hash for existing annotations. 
+
+- EOS Anchor integration.
+    - Allow users to connect their EOS wallet and see the annotations for their own NFTs.
+
+- Effect Network Annotation Analysis
+    - The clip-interrogator generates a set of phrases useful for image generators such as Stable Diffusion. The first phrases tend to be the most accurate and the last phrases the least, but this is only from my limited inspection. Searching is hampered when all the phrases are displayed and much more effective when only the first is displayed. Furthermore, The "ViT-L-14/openai" and "ViT-H-14/laion2b_s32b_b79k" need to be compared. Effect Network is a microtasking platform on EOS. It's possible to use it's workers to rate the annotations of images. This can be used to rate models in comparison to one another and also optimize how many phrases are best for both accuracy and searches.  
