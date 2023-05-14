@@ -1,7 +1,7 @@
 
 # NFT Content Indexer
 
-[This is a project sponsored by a grant from Pomelo](https://pomelo.io/grants/nftindexer), an EOS blockchain crowdfunding site. The purpose of the NFT indexer is to provide code demonstrating the simplicitly of collecting NFT content and analyzing it using HuggingFace models and libraries. The Demo linked below, it uses SearchKit to display all the collected annotations of NFT image content.  
+[This is a project sponsored by a grant from Pomelo](https://pomelo.io/grants/nftindexer), an EOS blockchain crowdfunding site. The purpose of the NFT indexer is to provide code demonstrating the simplicity of collecting NFT content and analyzing it using HuggingFace models and libraries. The Demo linked below uses SearchKit to display all the collected annotations of NFT image content.  
 
 [Demo](https://djstrikanova.github.io/nft-indexer-searchkit/)
 
@@ -65,7 +65,7 @@ nft_download.py is executed to download all unique NFT hashes found into the "do
 
 Step 3: Analyze Images
 
-nft_huggingface_analyze.py is executed to generate annotations for each unqiue IPFS hash discovered which had it's image downloaded. All annotations are stored in the "hash_table" in pgsql with their respective IPFS hash.
+nft_huggingface_analyze.py is executed to generate annotations for each unique IPFS hash discovered which had it's image downloaded. All annotations are stored in the "hash_table" in pgsql with their respective IPFS hash.
 
 ## Storage
 
@@ -89,4 +89,4 @@ Locally, pgsql is used to store data. The models of these tables are provided in
     - Allow users to connect their EOS wallet and see the annotations for their own NFTs.
 
 - Effect Network Annotation Analysis
-    - The clip-interrogator generates a set of phrases useful for image generators such as Stable Diffusion. The first phrases tend to be the most accurate and the last phrases the least, but this is only from my limited inspection. Searching is hampered when all the phrases are displayed and much more effective when only the first is displayed. Furthermore, The "ViT-L-14/openai" and "ViT-H-14/laion2b_s32b_b79k" need to be compared. Effect Network is a microtasking platform on EOS. It's possible to use it's workers to rate the annotations of images. This can be used to rate models in comparison to one another and also optimize how many phrases are best for both accuracy and searches.  
+    - The clip-interrogator generates a set of phrases useful for image generators such as Stable Diffusion. The first phrases tend to be the most accurate and the last phrases the least, but this is only from my limited inspection. Searching is hampered when all the phrases are displayed and much more effective when only the first is displayed. Furthermore, The "ViT-L-14/openai" and "ViT-H-14/laion2b_s32b_b79k" need to be compared. Effect Network is a microtasking platform on EOS. Its possible to use it's workers to rate the annotations of images. This can be used to rate models in comparison to one another and also optimize how many phrases are best for both accuracy and searches.  
